@@ -1,0 +1,28 @@
+{
+    "name": "game-dashboard",
+    "version": "1.0.0",
+    "description": "Very WIP Sample Site",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "npx parcel src/index.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JCrucillo2/game-dashboard.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/JCrucillo2/game-dashboard/issues"
+    },
+    "homepage": "https://github.com/JCrucillo2/game-dashboard#readme",
+    "dependencies": {
+        "firebase": "^9.6.6",
+        "parcel": "^2.3.0"
+    },
+    "devDependencies": {
+        "process": "^0.11.10"
+    }
+}
