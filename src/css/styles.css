@@ -1,0 +1,105 @@
+:root,
+html {
+    --primary: #8c38ff;
+    --light: #eeeeee;
+    --dark: #212121;
+    --darkened-primary: #4900af;
+    font-size: 62.5%;
+}
+
+body {
+    color: black;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.8rem; /* 18px */
+    line-height: 1.5;
+    font-weight: 300;
+    background: var(--dark);
+}
+
+.app-container {
+    max-width: 160rem;
+    margin: 3rem auto;
+    border-radius: 0.5rem;
+    background-color: var(--light);
+}
+.app-navigation {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding: 1rem;
+}
+
+.app-navigation nav ul {
+    display: flex;
+    padding: 0;
+}
+
+.app-navigation nav ul li {
+    list-style-type: none;
+    padding: 0 1rem;
+}
+
+.app-navigation nav ul li a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 2rem;
+    transition: 0.2s;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.app-navigation nav ul li a:hover {
+    background-color: var(--darkened-primary);
+    border-radius: 0.5rem;
+    color: var(--light);
+}
+
+.dashboard {
+    display: flex;
+}
+
+.sidebar {
+    width: 28.9rem;
+    height: calc(100vh - 6.4rem);
+    border-right: 1px solid black;
+    padding: 1rem;
+}
+
+.other-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.other-links a {
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: bold;
+    transition: 0.2s;
+    font-size: 2.4rem;
+}
+
+.other-links a:hover {
+    color: var(--darkened-primary);
+}
+
+.add-item {
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    padding: 1rem 0;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    transition: 0.2s;
+}
+
+.add-item:hover {
+    background-color: var(--darkened-primary);
+    color: var(--light);
+}
+
+.widget {
+    padding: 1rem;
+}
