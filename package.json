@@ -20,6 +20,7 @@
     "homepage": "https://github.com/JCrucillo2/game-dashboard#readme",
     "dependencies": {
         "firebase": "^9.6.6",
+        "nanoid": "^3.2.0",
         "parcel": "^2.3.0"
     },
     "devDependencies": {

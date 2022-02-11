@@ -83,7 +83,8 @@ body {
     color: var(--darkened-primary);
 }
 
-.add-item {
+.add-item,
+.submit-game button {
     width: 100%;
     cursor: pointer;
     border: none;
@@ -95,11 +96,62 @@ body {
     transition: 0.2s;
 }
 
-.add-item:hover {
+.submit-game button {
+    width: auto;
+    padding: 1rem 3rem;
+}
+
+.add-item:hover,
+.submit-game button:hover {
     background-color: var(--darkened-primary);
     color: var(--light);
 }
 
 .widget {
     padding: 1rem;
+}
+
+/* write.html styles */
+.add-new-game {
+    padding: 1rem;
+    text-align: center;
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+}
+
+.display img {
+    padding: 1rem;
+    border: 1rem solid var(--primary);
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+    background-color: var(--dark);
+    width: 60%;
+}
+
+.gameImageDes {
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.gameInfo {
+    margin: 3rem 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameInfo label {
+    font-weight: bold;
+}
+
+.gameInfo input {
+    border-radius: 0.5rem;
+    outline: none;
+    padding: 0.6rem;
 }

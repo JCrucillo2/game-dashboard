@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Game To Go</title>
+
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700;900&family=Source+Sans+Pro:wght@300;400;700;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <script type="module" src="js/write.js" defer></script>
+    </head>
+    <body>
+        <div class="app-container">
+            <header class="app-navigation">
+                <h1>placeholder</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <form id="gameForm" class="add-new-game">
+                    <div>
+                        <div class="display">
+                            <img
+                                src="static/images/insert-img.svg"
+                                alt="upload the game art"
+                            />
+                        </div>
+
+                        <label class="gameImageDes" for="gameImage"
+                            >Select image</label
+                        >
+                        <input
+                            type="file"
+                            id="gameImage"
+                            style="display: none"
+                            class="select-file"
+                            accept=".jpg, .png, .jpeg, .webp"
+                        />
+                    </div>
+
+                    <div class="gameInfo form-control">
+                        <label for="gameName">Game Name:</label>
+                        <input
+                            type="text"
+                            id="gameName"
+                            placeholder="Game Name"
+                        />
+                        <label for="gamePrice">Game Price:</label>
+                        <input
+                            type="text"
+                            id="gamePrice"
+                            placeholder="Game Price"
+                        />
+                        <label for="gameRating">Game Rating:</label>
+                        <input
+                            type="text"
+                            id="gameRating"
+                            placeholder="Game Rating"
+                        />
+                    </div>
+
+                    <div class="submit-game form-control">
+                        <button type="submit">Add Game</button>
+                    </div>
+                </form>
+            </main>
+            <footer></footer>
+        </div>
+    </body>
+</html>
