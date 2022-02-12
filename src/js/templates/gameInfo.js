@@ -33,7 +33,7 @@ function addGameControls(game) {
 function onEditGame(e) {
     const key = e.target.dataset.key;
     sessionStorage.setItem("key", key);
-    window.location.assign("update.html");
+    window.location.assign("edit.html");
 }
 
 function onDeleteGame(e) {
