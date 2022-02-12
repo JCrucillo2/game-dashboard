@@ -3,7 +3,7 @@ import {
     uploadBytes,
     getDownloadURL,
 } from "firebase/storage";
-import { ref as databaseRef, push, set, get } from "firebase/database";
+import { ref as databaseRef, push, set, get, update } from "firebase/database";
 import { db, storage } from "./libs/firebase/firebaseConfig";
 
 document.forms["gameForm"].addEventListener("submit", onEditGame);
@@ -23,7 +23,7 @@ function onImageSelected(e) {
     document.querySelector(".display img").src = URL.createObjectURL(file);
 }
 
-function editGame() {
+async function editGame() {
     const key = sessionStorage.getItem("key");
 
     // console.log(key);
@@ -44,6 +44,9 @@ function editGame() {
     const imageUrl = await getDownloadURL(imageRef);
     console.log(imageUrl);
     const storagePath = uploadResult.metadata.fullPath;
+
+    // sampling data
+    const itemRef = await push(dataRef);
 
     update(key, {
         imageUrl,
