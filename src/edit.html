@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Game To Go</title>
+
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700;900&family=Source+Sans+Pro:wght@300;400;700;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <script type="module" src="js/write.js" defer></script>
+    </head>
+    <body>
+        <div class="app-container">
+            <header class="app-navigation">
+                <h1>placeholder</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <a class="login-link" href="#"
+                            ><?xml version="1.0" encoding="utf-8"?>
+
+                            <svg
+                                version="1.1"
+                                id="Icons"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                x="0px"
+                                y="0px"
+                                viewBox="0 0 32 32"
+                                style="enable-background: new 0 0 32 32"
+                                xml:space="preserve"
+                            >
+                                <style type="text/css">
+                                    .st0 {
+                                        fill: none;
+                                        stroke: #000000;
+                                        stroke-width: 2;
+                                        stroke-linecap: round;
+                                        stroke-linejoin: round;
+                                        stroke-miterlimit: 10;
+                                    }
+                                    .st1 {
+                                        fill: none;
+                                        stroke: #000000;
+                                        stroke-width: 2;
+                                        stroke-linejoin: round;
+                                        stroke-miterlimit: 10;
+                                    }
+                                </style>
+                                <circle class="st0" cx="16" cy="16" r="14" />
+                                <circle class="st0" cx="16" cy="13" r="5" />
+                                <path
+                                    class="st0"
+                                    d="M5.4,25.1c1.8-4.1,5.8-7,10.6-7c4.8,0,8.9,2.9,10.6,7"
+                                />
+                            </svg>
+                        </a>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <form id="gameForm" class="add-new-game">
+                    <div>
+                        <div class="display">
+                            <img
+                                src="static/images/insert-img.svg"
+                                alt="upload the game art"
+                            />
+                        </div>
+
+                        <label class="gameImageDes" for="gameImage"
+                            >Select image</label
+                        >
+                        <input
+                            type="file"
+                            id="gameImage"
+                            style="display: none"
+                            class="select-file"
+                            accept=".jpg, .png, .jpeg, .webp"
+                        />
+                    </div>
+
+                    <div class="gameInfo">
+                        <label for="gameName">Game Name:</label>
+                        <input
+                            type="text"
+                            id="gameName"
+                            placeholder="Game Name"
+                        />
+                        <label for="gamePrice">Game Price:</label>
+                        <input
+                            type="text"
+                            id="gamePrice"
+                            placeholder="Game Price"
+                        />
+                        <label for="gameRating">Game Rating:</label>
+                        <input
+                            type="text"
+                            id="gameRating"
+                            placeholder="Game Rating"
+                        />
+                    </div>
+
+                    <div class="submit-game">
+                        <button type="submit">Add Game</button>
+                    </div>
+                </form>
+            </main>
+            <footer></footer>
+        </div>
+    </body>
+</html>
