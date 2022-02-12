@@ -16,6 +16,17 @@ body {
     background: var(--dark);
 }
 
+/* login */
+.login-link svg {
+    width: 3rem;
+    transition: 0.2s;
+}
+
+.login-link svg:hover {
+    background: var(--darkened-primary);
+    border-radius: 50%;
+}
+
 .app-container {
     max-width: 160rem;
     margin: 3rem auto;
@@ -26,7 +37,7 @@ body {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid black;
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
 }
 
 .app-navigation nav ul {
@@ -59,7 +70,7 @@ body {
 }
 
 .sidebar {
-    width: 28.9rem;
+    min-width: 28.9rem;
     height: calc(100vh - 6.4rem);
     border-right: 1px solid black;
     padding: 1rem;
@@ -128,7 +139,7 @@ body {
     border-radius: 0.5rem;
     margin: 2rem 0;
     background-color: var(--dark);
-    width: 60%;
+    width: 30%;
 }
 
 .gameImageDes {
@@ -136,6 +147,13 @@ body {
     padding: 1rem;
     border-radius: 0.5rem;
     cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.gameImageDes:hover {
+    color: var(--light);
+    background-color: var(--dark);
 }
 
 .gameInfo {
@@ -154,4 +172,51 @@ body {
     border-radius: 0.5rem;
     outline: none;
     padding: 0.6rem;
+}
+
+/* template style */
+.game-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.game-class {
+    width: 30%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--dark);
+    margin-bottom: 6rem;
+}
+
+.game-class img {
+    border-radius: 0.5rem;
+}
+
+.game-information {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: var(--light);
+    margin: 1rem 0;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.action-buttons button {
+    width: 100%;
+    font-weight: bold;
+    background-color: var(--primary);
+    transition: 0.2s;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+.action-buttons button:hover {
+    background-color: var(--darkened-primary);
+    color: var(--light);
 }
