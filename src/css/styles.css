@@ -16,6 +16,11 @@ body {
     background: var(--dark);
 }
 
+.hidden-item {
+    visibility: none;
+    display: none;
+}
+
 /* login */
 .login-link svg {
     width: 3rem;
