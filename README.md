@@ -1,4 +1,4 @@
-# Statues and Figures Store
+# JCFigures Store
 
 <details>
     <summary>Table of Contents</summary>
