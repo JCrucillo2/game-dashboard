@@ -2,7 +2,6 @@ import { ref, get } from "firebase/database";
 import { db } from "./libs/firebase/firebaseConfig";
 import { gameInfo } from "./templates/gameInfo";
 
-console.log(db);
 let store = [];
 
 async function pageInit() {

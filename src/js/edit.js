@@ -41,10 +41,10 @@ async function editGame() {
     const file = document.querySelector("#gameImage").files[0];
 
     const gameRef = databaseRef(db, `game/${key}`);
+
     const imageRef = storageRef(storage, `images/${file.name}`);
     const uploadResult = await uploadBytes(imageRef, file);
     const imageUrl = await getDownloadURL(imageRef);
-    console.log(imageUrl);
     const storagePath = uploadResult.metadata.fullPath;
 
     update(gameRef, {

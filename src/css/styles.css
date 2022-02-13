@@ -4,6 +4,7 @@ html {
     --light: #eeeeee;
     --dark: #212121;
     --darkened-primary: #4900af;
+    --gold: #ffd700;
     font-size: 62.5%;
 }
 
@@ -125,7 +126,7 @@ body {
 }
 
 .widget {
-    padding: 1rem;
+    padding: 3rem;
 }
 
 /* write.html styles */
@@ -184,7 +185,7 @@ body {
 .game-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    gap: 6.2rem;
 }
 
 .game-class {
@@ -192,7 +193,6 @@ body {
     padding: 1rem;
     border-radius: 0.5rem;
     background-color: var(--dark);
-    margin-bottom: 3rem;
     height: 100%;
 }
 
@@ -201,11 +201,28 @@ body {
 }
 
 .game-information {
-    display: flex;
     justify-content: space-between;
     font-weight: bold;
     color: var(--light);
     margin: 1rem 0;
+}
+
+.game-information span {
+    color: var(--primary);
+}
+
+.game-detail svg {
+    fill: var(--gold);
+    width: 2rem;
+}
+
+.game-detail p:nth-child(1) {
+    display: flex;
+}
+
+.game-detail {
+    display: flex;
+    justify-content: space-between;
 }
 
 .action-buttons {
@@ -248,4 +265,22 @@ body {
     font-weight: bold;
     margin-bottom: 1rem;
     transition: 0.2s;
+}
+
+/* buy now */
+.buynow {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--gold);
+    padding: 0.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    color: var(--dark);
+    transition: 0.2s;
+}
+
+.buynow:hover {
+    background-color: var(--light);
 }
