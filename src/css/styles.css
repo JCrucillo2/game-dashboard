@@ -13,7 +13,6 @@ body {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 1.8rem; /* 18px */
     line-height: 1.5;
-    font-weight: 300;
     background: var(--dark);
 }
 
@@ -33,6 +32,23 @@ body {
     border-radius: 50%;
 }
 
+/* site title */
+.site-title {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.site-title img {
+    width: 7.5rem;
+    border-radius: 0.5rem;
+}
+
+h1 {
+    font-family: "Pacifico", cursive;
+    color: var(--dark);
+}
+
 .app-container {
     max-width: 160rem;
     margin: 3rem auto;
@@ -43,7 +59,8 @@ body {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid black;
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem;
+    align-items: center;
 }
 
 .app-navigation nav ul {
@@ -77,7 +94,6 @@ body {
 
 .sidebar {
     min-width: 28.9rem;
-    height: calc(100vh - 6.4rem);
     border-right: 1px solid black;
     padding: 1rem;
 }
@@ -207,7 +223,8 @@ body {
     margin: 1rem 0;
 }
 
-.game-information span {
+.game-information span,
+.game-detail span {
     color: var(--primary);
 }
 
@@ -283,4 +300,30 @@ body {
 
 .buynow:hover {
     background-color: var(--light);
+}
+
+/* widget */
+.front-page {
+    text-align: center;
+}
+
+.front-page p:nth-child(1) {
+    font-size: 4rem;
+    font-family: "Pacifico", cursive;
+    margin-bottom: 2rem;
+}
+
+.front-page p:nth-child(2) {
+    font-size: 2.4rem;
+}
+
+.widget h2 {
+    font-size: 3.6rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 3rem;
+    background-color: var(--gold);
+    color: var(--dark);
+    border-radius: 0.5rem;
+    font-family: "Pacifico", cursive;
 }
