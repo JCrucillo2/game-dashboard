@@ -7,7 +7,7 @@ function gameInfo({ key, game, price, rating, imageUrl }) {
         />
         <div class="game-information">
             <p>${game}</p>
-            <p>${rating}/5</p>
+            <p><i class="fa-solid fa-star"></i>${rating}/5</p>
             <p>${price}</p>
         </div>
         <div class="action-buttons">

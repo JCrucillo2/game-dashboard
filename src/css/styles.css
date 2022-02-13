@@ -113,7 +113,8 @@ body {
 }
 
 .add-item:hover,
-.submit-game button:hover {
+.submit-game button:hover,
+.back-btn:hover {
     background-color: var(--darkened-primary);
     color: var(--light);
 }
@@ -187,6 +188,7 @@ body {
     border-radius: 0.5rem;
     background-color: var(--dark);
     margin-bottom: 3rem;
+    height: 100%;
 }
 
 .game-class img {
@@ -219,4 +221,26 @@ body {
 .action-buttons button:hover {
     background-color: var(--darkened-primary);
     color: var(--light);
+}
+
+/* edit.html styles */
+.submit-game {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.back-btn {
+    display: block;
+    padding: 1rem 3rem;
+    text-decoration: none;
+    color: var(--light);
+    cursor: pointer;
+    border: none;
+    background-color: var(--dark);
+    border-radius: 0.5rem;
+    padding: 1rem 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    transition: 0.2s;
 }

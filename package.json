@@ -4,7 +4,7 @@
     "description": "Very WIP Sample Site",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "npx parcel src/index.html",
+        "start": "npx parcel src/edit.html",
         "static": "cp -rf ./src/static dist",
         "build": "npx parcel build src/index.html",
         "dev": "(parcel ./src/index.html) & parcel watch ./src/index.html"
