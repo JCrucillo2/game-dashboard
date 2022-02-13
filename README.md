@@ -1,8 +1,52 @@
-# Game Dashboard
+# Statues and Figures Store
 
-Very WIP Sample Site
+<details>
+    <summary>Table of Contents</summary>
+    <ol>
+        <li>
+            <a href="about-the-project">About The Project</a>
+        </li>
+    </ol>
+</details>
 
-## Features:
+<!-- All information here -->
 
-1. CRUD with Firebase
-2. Responsive design (WIP)
+## About The Project
+
+[![JCFigures Product Page][product-page-sc]](https://jcfigures.netlify.app/read.html)
+
+JCFigures is a site dedicated in selling famous and high quality statues and figurines of some of the best characters in video games.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Things I used
+
+-   [JavaScript](https://www.javascript.com/)
+-   [Firebase](https://firebase.google.com/)
+-   [Nanoid](https://www.npmjs.com/package/nanoid)
+-   [Parcel](https://www.npmjs.com/package/parcel)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Feature
+
+-   Uses firebase realtime database to perform the CRUD operations.
+-   Ability to perform admin things such as editing and deleting products.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- roadmap -->
+
+## Roadmap
+
+-   [x] Add CRUD functionality
+-   [x] Added hover transition links
+-   [ ] Responsive design
+
+These are the currently planned changes I want to do in the future.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- markdown links & images -->
+
+[product-page-sc]: images/jcfigures-product-page.png
