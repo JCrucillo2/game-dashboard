@@ -11,6 +11,14 @@ document.forms["gameForm"].addEventListener("submit", onAddGame);
 document
     .querySelector("#gameImage")
     .addEventListener("change", onImageSelected);
+document.querySelector("#back-btn").addEventListener("click", pageBack);
+
+// back button functionality
+function pageBack(e) {
+    if (confirm("Do you want to leave?")) {
+        location.href = "read.html";
+    }
+}
 
 // Loading Form Submit Event
 function onAddGame(e) {

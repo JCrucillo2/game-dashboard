@@ -117,7 +117,7 @@ h1 {
 }
 
 .add-item,
-.submit-game button {
+.submit-game button:nth-child(1) {
     width: 100%;
     cursor: pointer;
     border: none;
@@ -129,14 +129,14 @@ h1 {
     transition: 0.2s;
 }
 
-.submit-game button {
+.submit-game button:nth-child(1) {
     width: auto;
     padding: 1rem 3rem;
 }
 
 .add-item:hover,
 .submit-game button:hover,
-.back-btn:hover {
+#back-btn:hover {
     background-color: var(--darkened-primary);
     color: var(--light);
 }
@@ -269,8 +269,7 @@ h1 {
     justify-content: center;
 }
 
-.back-btn {
-    display: block;
+#back-btn {
     padding: 1rem 3rem;
     text-decoration: none;
     color: var(--light);

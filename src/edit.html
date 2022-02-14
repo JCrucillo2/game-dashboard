@@ -93,7 +93,7 @@
             <main>
                 <form id="gameForm" class="add-new-game">
                     <div>
-                        <div class="display">
+                        <div id="uploadImage" class="display">
                             <img
                                 src="static/images/insert-img.svg"
                                 alt="upload the game art"
@@ -109,7 +109,6 @@
                             style="display: none"
                             class="select-file"
                             accept=".jpg, .png, .jpeg, .webp"
-                            required
                         />
                     </div>
 
@@ -142,7 +141,7 @@
 
                     <div class="submit-game">
                         <button type="submit">Edit</button>
-                        <a class="back-btn" href="read.html">Back</a>
+                        <button id="back-btn">Back</button>
                     </div>
                 </form>
             </main>

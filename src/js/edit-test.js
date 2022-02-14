@@ -3,18 +3,9 @@ import {
     uploadBytes,
     getDownloadURL,
 } from "firebase/storage";
-import {
-    ref as databaseRef,
-    push,
-    set,
-    get,
-    update,
-    getDatabase,
-    remove,
-} from "firebase/database";
+import { ref as databaseRef, push, set, get, update } from "firebase/database";
 import { db, storage } from "./libs/firebase/firebaseConfig";
 
-document.forms["gameForm"].addEventListener("submit", onEditGame);
 document
     .querySelector("#gameImage")
     .addEventListener("change", onImageSelected);
@@ -27,19 +18,14 @@ function pageBack(e) {
     }
 }
 
-function onEditGame(e) {
-    e.preventDefault();
-    editGame();
-}
+const gameForm = document.forms["gameForm"];
 
-// File Input Change Handler
 function onImageSelected(e) {
     let file = e.target.files[0];
 
-    document.querySelector(".display img").src = URL.createObjectURL(file);
+    document.querySelector("#uploadImage img").src = URL.createObjectURL(file);
 }
 
-// function for prepopulating data if it exists
 async function pageInit() {
     const key = sessionStorage.getItem("key");
     const gameRef = databaseRef(db, `game/${key}`);
@@ -48,13 +34,17 @@ async function pageInit() {
     if (gameSnapShot.exists()) {
         setFieldValues(gameSnapShot.val());
     }
+
+    gameForm.addEventListener("submit", onUpdateGame);
 }
 
-pageInit();
+function onUpdateGame(e) {
+    e.preventDefault();
+    updateGameData();
+}
 
 function setFieldValues({ game, rating, price, imageUrl }) {
     const gameForm = document.forms["gameForm"];
-
     gameForm.elements["gameName"].value = game;
     gameForm.elements["gameRating"].value = rating;
     gameForm.elements["gamePrice"].value = price;
@@ -62,28 +52,35 @@ function setFieldValues({ game, rating, price, imageUrl }) {
     document.querySelector("#uploadImage img").src = imageUrl;
 }
 
-// function for updating
-async function editGame() {
+function updateGameData() {
+    const game = gameForm.elements["gameName"].value.trim();
+    const price = gameForm.elements["gamePrice"].value.trim();
+    const rating = gameForm.elements["gameRating"].value.trim();
+    const file = gameForm.elements["gameImage"].files;
+
     const key = sessionStorage.getItem("key");
-
-    const game = document.querySelector("#gameName").value.trim();
-    const price = document.querySelector("#gamePrice").value.trim();
-    const rating = document.querySelector("#gameRating").value.trim();
-
-    const file = document.querySelector("#gameImage").files[0];
-
     const gameRef = databaseRef(db, `game/${key}`);
 
-    const imageRef = storageRef(storage, `images/${file.name}`);
-    const uploadResult = await uploadBytes(imageRef, file);
-    const imageUrl = await getDownloadURL(imageRef);
-    const storagePath = uploadResult.metadata.fullPath;
+    if (file.length !== 0) {
+        async function editingGame() {
+            const imageRef = storageRef(storage, `images/${key}/${file.name}`);
+            const uploadResult = await uploadBytes(imageRef, file);
+            const imageUrl = await getDownloadURL(imageRef);
+            const storagePath = uploadResult.metadata.fullPath;
+
+            update(gameRef, {
+                storagePath,
+            });
+        }
+
+        editingGame();
+    }
 
     update(gameRef, {
-        imageUrl,
-        storagePath,
         game,
         price,
         rating,
     });
 }
+
+pageInit();
