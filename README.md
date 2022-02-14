@@ -48,7 +48,7 @@ JCFigures is a site dedicated in selling famous and high quality statues and fig
 -   [x] Add CRUD functionality
 -   [x] Added hover transition links
 -   [ ] Responsive design
--   [ ] Prepopulate fields in edit.html
+-   [x] Prepopulate fields in edit.html
 
 These are the currently planned changes I want to do in the future.
 
